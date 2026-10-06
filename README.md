@@ -34,7 +34,7 @@ This repository models that idea by combining:
 
 ## System architecture
 
-'''
+```
 +--------------------------+
 | External Consumers       |
 | - Operators              |
