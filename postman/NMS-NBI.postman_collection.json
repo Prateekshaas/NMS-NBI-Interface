@@ -1,0 +1,107 @@
+{
+  "info": {
+    "name": "NMS NBI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "List devices",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/devices"
+        }
+      }
+    },
+    {
+      "name": "Get device R1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/devices/R1"
+        }
+      }
+    },
+    {
+      "name": "Status R1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/devices/R1/status"
+        }
+      }
+    },
+    {
+      "name": "Metrics history SW2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/devices/SW2/metrics"
+        }
+      }
+    },
+    {
+      "name": "Update config R1",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/devices/R1/config"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"hostname\": \"core-r1\",\n  \"ntpServer\": \"time.google.com\",\n  \"snmpEnabled\": true,\n  \"loggingLevel\": \"DEBUG\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Restart AP1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/devices/AP1/restart"
+        }
+      }
+    },
+    {
+      "name": "All alerts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/alerts"
+        }
+      }
+    },
+    {
+      "name": "Critical alerts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/alerts?severity=CRITICAL"
+        }
+      }
+    },
+    {
+      "name": "Unknown device (404)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/devices/NOPE"
+        }
+      }
+    }
+  ]
+}
