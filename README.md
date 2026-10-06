@@ -3,13 +3,6 @@
 A Java 17 + Spring Boot NMS implementing multivariate historical-baseline anomaly detection and explainable fault diagnosis through a REST-based Northbound Interface.
 
 The system ingests device telemetry, evaluates network health using rule-based detection, and includes a separate analytics layer that scores multivariate deviations from historical behavior to support explainable diagnosis without replacing the core monitoring workflow.
-cd "C:/Users/prate/Downloads/nms-nbi/nms-nbi"
-
-git status
-git branch
-git remote -v
-git push -u origin main
-## Overview
 
 This project provides a lightweight, in-memory representation of a Network Management System (NMS). Instead of depending on real hardware, it simulates a small network containing routers, switches, and access points. The application exposes HTTP endpoints that allow users to inspect device state, read telemetry history, update device configuration, restart a device, and retrieve active alerts.
 
@@ -22,7 +15,7 @@ The architectural design is intentionally aligned with a realistic NBI pattern:
 
 This keeps the operational monitoring logic distinct from the analytics layer while preserving a stable northbound interface for external consumers.
 
-## Why this project matters
+OBJECTIVE:
 
 Modern network operations increasingly require systems that can do more than simple threshold monitoring. Operators need to answer questions such as:
 
@@ -41,7 +34,7 @@ This repository models that idea by combining:
 
 ## System architecture
 
-```text
+'''
 +--------------------------+
 | External Consumers       |
 | - Operators              |
